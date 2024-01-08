@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(44, 43, 43);
+    color: white; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: rgb(31, 26, 26);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 500px;
+    width: 500px;
+    text-align: center; 
+    border-radius: 10px;
+    position: relative; /* Make position relative for absolute positioning of logo */
+}
+
+img{
+    height: 240px;
+    width: 430px;
+}
+
+label {
+    /* display: block; */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input {
+    width: 75%; /* Make input fields take up 100% width */
+    padding: 15px; /* Adjust padding for better appearance */
+    box-sizing: border-box; /* Include padding in the input's total width */
+    margin: 7px; /* Center the input fields and add margin between them */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 10px; /* Add border radius */
+}
+
+button {
+    background-color: #4CAF50; /* Green color for the submit button */
+    color: white;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    width: 75%;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+
