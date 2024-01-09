@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+  <body>
+    <div class="main bg-slate-300 flex flex-col justify-center items-center gap-4 h-screen w-screen">
+       
+       <div class="container1">
+         <p class="text-sm font-bold">Company Metrics</p>
+         <div class="grid overflow-visible gap-2   grid-cols-4 ">
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm text-green-400">$406,511,29</p>
+            <p class="text-sm">Total Revenue</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">$620</p>
+            <p class="text-sm">Total Jobs Avg</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">655</p>
+            <p class="text-sm">Tickets Created</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">735</p>
+            <p class="text-sm">Tickets Scheduled</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm text-red-400">$110,488.8</p>
+            <p class="text-sm">Outstanding Amount</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">105</p>
+            <p class="text-sm">Membership Sold</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">436</p>
+            <p class="text-sm">Jobs Completed</p>
+          </div>
+          </div>
+          <div class="border border-y-0 border-r-0 border-green-600 border-l-[5px] w-[14rem] h-[4rem] bg-white">
+            <div class="pl-2 flex flex-col gap-3"> 
+            <p class="text-2sm ">65</p>
+            <p class="text-sm">Total Canceled</p>
+          </div>
+          </div>
+         </div>
+       </div>
+       <div class=" flex">
+         <div>
+          <p class="text-sm font-bold">Revenue by Job Type</p>
+          <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+         
+           
+         </div>
+         <div>
+          <p class="text-sm font-bold">Revenue by Job Location</p>
+          <canvas id="myChart1" style="width:100%;max-width:700px"></canvas>
+         </div>
+       </div>
+
+    </div>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script>
+      const xValues = ["a","b","c","d","e","f"];
+      const yValues = [55, 49, 44, 24, 15,34];
+    
+      
+      new Chart("myChart", {
+        type: "horizontalBar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: "green",
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: "Revenue By November 2019",
+            position: 'bottom'
+          }
+        }
+      });
+      </script>
+      <script>
+        const x1Values = ["a","b","c","d","e","f"];
+        const y1Values = [55, 49, 44, 24, 15,34];
+      
+        
+        new Chart("myChart1", {
+          type: "horizontalBar",
+          data: {
+            labels: x1Values,
+            datasets: [{
+              backgroundColor: "green",
+              data: y1Values
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Revenue By November 2019",
+              position: 'bottom'
+            }
+          }
+        });
+        </script>
+</body>
+</html>
